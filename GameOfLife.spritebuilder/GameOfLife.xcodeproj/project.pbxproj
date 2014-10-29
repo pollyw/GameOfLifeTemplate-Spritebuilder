@@ -36,8 +36,8 @@
 		B77F1B3E17B978D7009739AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3D17B978D7009739AE /* Foundation.framework */; };
 		B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
-		CFA0EE4D19FF102C003B5565 /* CCSprite+Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA0EE4C19FF102C003B5565 /* CCSprite+Grid.m */; };
-		CFA0EE5119FF1082003B5565 /* CCSprite+Creature.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA0EE5019FF1082003B5565 /* CCSprite+Creature.m */; };
+		CFA0EE541A00A9FE003B5565 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA0EE531A00A9FE003B5565 /* Grid.m */; };
+		CFA0EE571A00AA99003B5565 /* Creature.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA0EE561A00AA99003B5565 /* Creature.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,10 +92,10 @@
 		B77F1B3F17B978D7009739AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B77F1B4117B978D7009739AE /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libObjectiveChipmunk.a; path = "../libs/cocos2d-iphone/external/Chipmunk/xcode/build/Debug-iphoneos/libObjectiveChipmunk.a"; sourceTree = "<group>"; };
-		CFA0EE4B19FF102C003B5565 /* CCSprite+Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCSprite+Grid.h"; sourceTree = "<group>"; };
-		CFA0EE4C19FF102C003B5565 /* CCSprite+Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCSprite+Grid.m"; sourceTree = "<group>"; };
-		CFA0EE4F19FF1082003B5565 /* CCSprite+Creature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCSprite+Creature.h"; sourceTree = "<group>"; };
-		CFA0EE5019FF1082003B5565 /* CCSprite+Creature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCSprite+Creature.m"; sourceTree = "<group>"; };
+		CFA0EE521A00A9FE003B5565 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		CFA0EE531A00A9FE003B5565 /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
+		CFA0EE551A00AA99003B5565 /* Creature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Creature.h; sourceTree = "<group>"; };
+		CFA0EE561A00AA99003B5565 /* Creature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Creature.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,10 +135,10 @@
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
-				CFA0EE4B19FF102C003B5565 /* CCSprite+Grid.h */,
-				CFA0EE4C19FF102C003B5565 /* CCSprite+Grid.m */,
-				CFA0EE4F19FF1082003B5565 /* CCSprite+Creature.h */,
-				CFA0EE5019FF1082003B5565 /* CCSprite+Creature.m */,
+				CFA0EE521A00A9FE003B5565 /* Grid.h */,
+				CFA0EE531A00A9FE003B5565 /* Grid.m */,
+				CFA0EE551A00AA99003B5565 /* Creature.h */,
+				CFA0EE561A00AA99003B5565 /* Creature.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -350,11 +350,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFA0EE4D19FF102C003B5565 /* CCSprite+Grid.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
-				CFA0EE5119FF1082003B5565 /* CCSprite+Creature.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
+				CFA0EE541A00A9FE003B5565 /* Grid.m in Sources */,
+				CFA0EE571A00AA99003B5565 /* Creature.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

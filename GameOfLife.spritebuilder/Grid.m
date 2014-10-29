@@ -1,18 +1,19 @@
 //
-//  CCSprite+Grid.m
+//  Grid.m
 //  GameOfLife
 //
-//  Created by Polly Wu on 10/27/14.
+//  Created by Polly Wu on 10/28/14.
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "CCSprite+Grid.h"
-#import "CCSprite+Creature.h"
+#import "Grid.h"
+#import "Creature.h"
 
+//these are variables that cannot be changed
 static const int GRID_ROWS = 8;
 static const int GRID_COLUMNS = 10;
 
-@implementation CCSprite (Grid) {
+@implementation Grid {
     NSMutableArray *_gridArray;
     float _cellWidth;
     float _cellHeight;
@@ -23,7 +24,7 @@ static const int GRID_COLUMNS = 10;
     
     [self setupGrid];
     
-    //accept touches on the grid
+    //accept Touches on the grid
     self.userInteractionEnabled = YES;
 }
 
@@ -39,23 +40,23 @@ static const int GRID_COLUMNS = 10;
     _gridArray = [NSMutableArray array];
     
     //initialize creatures
-    for (int i = 0; i < GRID_ROWS; i++) {
-        //this is how you create two dimentional arrays in Objective-C.
-        //You put arrays into arrays
+    for (int i = 0; i< GRID_ROWS; i++) {
+        //this is how you create two dimentional array in obj-c. you put arrays into arrays
         _gridArray[i] = [NSMutableArray array];
-        x = 0;
+        x =0;
         
-        for (int j = 0; j < GRID_COLUMNS; j++) {
+        for (int j = 0; j <GRID_COLUMNS; j++) {
             Creature *creature = [[Creature alloc] initCreature];
             creature.anchorPoint = ccp(0,0);
             creature.position = ccp(x,y);
             [self addChild:creature];
             
-            //this is shorthand to access an array inside an array
-            _gridArray[i][j] = creature;
+            //this is shorhad to access an array inside an array
+            _gridArray [i][j] = creature;
             
-            //make creatures visible to test this method, remove this once we know we have filled the grid properly
+            //****[DELETE LATER] make creatures visible to test this method, remove this once we know we have filled the grid properly
             creature.isAlive = YES;
+            
             x += _cellWidth;
         }
         
