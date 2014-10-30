@@ -142,6 +142,8 @@ static const int GRID_COLUMNS = 10;
 }
 
 -(void)updateCreatures {
+    
+    int numAlive = 0;
     //iterate through the rows
     //note that nsarray has a method 'count' that will return the number of elements in the array
     for (int i=0; i < [_gridArray count]; i++) {
@@ -152,11 +154,17 @@ static const int GRID_COLUMNS = 10;
             //access the creature in the cell that corresponds to the current row/column
             Creature *currentCreature = _gridArray[i][j];
             
+            if(currentCreature.isAlive == TRUE) {
+                numAlive += 1;
+            }
+            
             if (currentCreature.livingNeighbors == 3) {
                 currentCreature.isAlive = TRUE;
             } else if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors >= 4) {
                 currentCreature.isAlive = FALSE;
             }
+            
+            
         }
     }
 }
